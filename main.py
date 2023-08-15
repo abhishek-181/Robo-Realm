@@ -56,14 +56,14 @@ if __name__ == '__main__':
 
             break
 
-        # converting user-1 input as speech using Powershell command --Speak function
+        # converting user-2 input as speech using Powershell command --Speak function
         powershell_command = fr'''
         Add-Type -AssemblyName System.Speech
         $speechSynthesizer = New-Object System.Speech.Synthesis.SpeechSynthesizer
         $speechSynthesizer.Speak("{user_2_input}")
         '''
 
-        # executing Powershell command for user-1
+        # executing Powershell command for user-2
         subprocess.run(["powershell", "-Command", powershell_command])
 
 
